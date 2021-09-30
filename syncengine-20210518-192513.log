@@ -1,0 +1,80 @@
+AzureActiveDirectorySyncEngine Verbose: 903 : ==========================================================================
+AzureActiveDirectorySyncEngine Verbose: 903 : Sync Engine install Starting: 05/18/2021 19:25:13
+AzureActiveDirectorySyncEngine Verbose: 903 : ==========================================================================
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::GetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\MSOLCoExistence, InstallationIdentifier, {NULL})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::GetStringValue:8bba46202a834ee18de853b470abf542
+AzureActiveDirectorySyncEngine Verbose: 903 : Initializing the installation task...
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::SetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\MSOLCoExistence\CurrentVersion, InstallationIdentifier, 8bba46202a834ee18de853b470abf542)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::SetStringValue
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::SetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\MSOLCoExistence\CurrentVersion, InstallationPath, C:\Program Files\Microsoft Azure AD Sync)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::SetStringValue
+AzureActiveDirectorySyncEngine Verbose: 903 : Starting the installation task 1/4: Microsoft SQL Server Express LocalDB...
+AzureActiveDirectorySyncEngine Information: 904 : Starting: Installing the Microsoft SQL Server Express LocalDB......
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::DoesRegistrySubKeyExist(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{72b030ed-b1e3-45e5-ba33-a1f5625f2b93})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::DoesRegistrySubKeyExist:True
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::GetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{72b030ed-b1e3-45e5-ba33-a1f5625f2b93}, DisplayVersion, {NULL})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::GetStringValue:11.4.7469.6
+AzureActiveDirectorySyncEngine Information: 904 : An equal or higher version of Microsoft SQL Server Express LocalDB is already installed. Target version = 11.4.7469.6, Installed version = 11.4.7469.6
+AzureActiveDirectorySyncEngine Information: 904 : Finished: Installing the Microsoft SQL Server Express LocalDB.... Duration: 0.004 sec.
+AzureActiveDirectorySyncEngine Verbose: 903 : Starting the installation task 2/4: Microsoft SQL Server Native Client...
+AzureActiveDirectorySyncEngine Information: 904 : Starting: Installing the Microsoft SQL Server Native Client......
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::DoesRegistrySubKeyExist(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{b9274744-8bae-4874-8e59-2610919cd419})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::DoesRegistrySubKeyExist:True
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::GetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{b9274744-8bae-4874-8e59-2610919cd419}, DisplayVersion, {NULL})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::GetStringValue:11.4.7001.0
+AzureActiveDirectorySyncEngine Information: 904 : An equal or higher version of Microsoft SQL Server Native Client is already installed. Target version = 11.4.7001.0, Installed version = 11.4.7001.0
+AzureActiveDirectorySyncEngine Information: 904 : Finished: Installing the Microsoft SQL Server Native Client.... Duration: 0.004 sec.
+AzureActiveDirectorySyncEngine Verbose: 903 : Starting the installation task 3/4: Microsoft SQL Server Command Line Utilities...
+AzureActiveDirectorySyncEngine Information: 904 : Starting: Installing the Microsoft SQL Server Command Line Utilities......
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::DoesRegistrySubKeyExist(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{89ca7913-f891-4546-8f55-355338677fe6})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::DoesRegistrySubKeyExist:True
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::GetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{89ca7913-f891-4546-8f55-355338677fe6}, DisplayVersion, {NULL})
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::GetStringValue:11.4.7001.0
+AzureActiveDirectorySyncEngine Information: 904 : An equal or higher version of Microsoft SQL Server Command Line Utilities is already installed. Target version = 11.4.7001.0, Installed version = 11.4.7001.0
+AzureActiveDirectorySyncEngine Information: 904 : Finished: Installing the Microsoft SQL Server Command Line Utilities.... Duration: 0.004 sec.
+AzureActiveDirectorySyncEngine Verbose: 903 : Starting the installation task 4/4: Synchronization Service...
+AzureActiveDirectorySyncEngine Information: 904 : Starting: Installing the Synchronization Service......
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::SetBooleanValue(HKEY_LOCAL_MACHINE, SYSTEM\CurrentControlSet\services\ADSync\Parameters, LocalDBKeepAlive, True)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::SetBooleanValue
+AzureActiveDirectorySyncEngine Information: 904 : Starting: Creating a managed service account for the Synchronization Service to use...
+AzureActiveDirectorySyncEngine Information: 904 : Finished: Creating a managed service account for the Synchronization Service to use. Duration: 0.776 sec.
+AzureActiveDirectorySyncEngine Information: 904 : SyncServiceAccount: Using a AutoGeneratedManagedServiceAccount
+AzureActiveDirectorySyncEngine Verbose: 903 : StartMicrosoftKeyDistributionService:
+AzureActiveDirectorySyncEngine Verbose: 903 : StartMicrosoftKeyDistributionService: completed successfully.
+AzureActiveDirectorySyncEngine Verbose: 903 : CreateBootstrapService:
+AzureActiveDirectorySyncEngine Verbose: 903 : TryStopAndDeleteBootstrapService.
+AzureActiveDirectorySyncEngine Verbose: 903 : CreateBootstrapService: EventLog.CreateEventSource caught expected exception. Details System.ArgumentException: Source ADSyncBootstrap already exists on the local computer.
+   at System.Diagnostics.EventLog.CreateEventSource(EventSourceCreationData sourceData)
+   at Microsoft.Azure.ActiveDirectory.Synchronization.Setup.SynchronizationServiceSetupTask.CreateBootstrapService(SyncServiceAccount syncServiceAccount)
+AzureActiveDirectorySyncEngine Error: 906 : CreateBootstrapService - Caught unexpected exception. Details System.ComponentModel.Win32Exception (0x80004005): The filename or extension is too long
+   at System.ServiceProcess.ServiceInstaller.Install(IDictionary stateSaver)
+   at Microsoft.Online.Deployment.Framework.Providers.ServiceControllerProvider.CreateService(String serviceName, String serviceDescription, String username, String password, String assemblyPath)
+   at Microsoft.Azure.ActiveDirectory.Synchronization.Setup.SynchronizationServiceSetupTask.CreateBootstrapService(SyncServiceAccount syncServiceAccount)
+AzureActiveDirectorySyncEngine Error: 906 : SynchronizationServiceSetupTask:InstallCore - Caught unexpected exception. Details System.ComponentModel.Win32Exception (0x80004005): The filename or extension is too long
+   at System.ServiceProcess.ServiceInstaller.Install(IDictionary stateSaver)
+   at Microsoft.Online.Deployment.Framework.Providers.ServiceControllerProvider.CreateService(String serviceName, String serviceDescription, String username, String password, String assemblyPath)
+   at Microsoft.Azure.ActiveDirectory.Synchronization.Setup.SynchronizationServiceSetupTask.CreateBootstrapService(SyncServiceAccount syncServiceAccount)
+   at Microsoft.Azure.ActiveDirectory.Synchronization.Setup.SynchronizationServiceSetupTask.InstallCore(String logFilePath, String logFileSuffix)
+AzureActiveDirectorySyncEngine Error: 906 : SyncServiceAccount:RemoveAccountRights - no SidString available
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::SetBooleanValue(HKEY_LOCAL_MACHINE, SYSTEM\CurrentControlSet\services\ADSync\Parameters, LocalDBKeepAlive, False)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::SetBooleanValue
+AzureActiveDirectorySyncEngine Verbose: 903 : RestartBootstrapService:
+AzureActiveDirectorySyncEngine Verbose: 903 : RestartBootstrapService: completed successfully.
+AzureActiveDirectorySyncEngine Error: 906 : The filename or extension is too long
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::SetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Azure AD Connect, SqlAoaAsyncMode, False)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::SetStringValue
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> ProvisioningWebServiceAdapter::GetCompanyConfiguration(False)
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> ProvisioningWebServiceAdapter::Initialize(admin@XXXXXXX.onmicrosoft.com)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< ProvisioningWebServiceAdapter::Initialize
+AzureActiveDirectorySyncEngine Verbose: 903 : ProvisioningWebServiceAdapter::ExecuteWithRetry: Action: ProvisioningWebServiceAdapter::GetCompanyConfiguration.
+AzureActiveDirectorySyncEngine Verbose: 903 : Performing GetCompanyConfiguration. Currently at attempt: 0. trackingID: 00000000-0000-0000-0000-000000000000
+AzureActiveDirectorySyncEngine Verbose: 903 : Creating channel factory with configuration: MicrosoftOnline_IProvisioningWebService trackingId: ae23641b-ca33-4153-8dbf-52546734bc27
+AzureActiveDirectorySyncEngine Verbose: 903 : Creating channel factory to URL: https://adminwebservice.microsoftonline.com/provisioningservice.svc with default binding configuration. trackingId: ae23641b-ca33-4153-8dbf-52546734bc27
+AzureActiveDirectorySyncEngine Verbose: 903 : InvokeAwsAPI: GetCompanyConfiguration complete at attempt: 0 trackingId: ae23641b-ca33-4153-8dbf-52546734bc27
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< ProvisioningWebServiceAdapter::GetCompanyConfiguration:CompanyConfiguration[DomainName: , DisplayName: The XXXXXX Company, TenantId: 77a48589-04b5-428a-8986-946b417634a2, Description: , IsDirSyncing: True, DirSyncFeatures: 41017, IsPasswordSyncing: True, TechnicalContactName: , TechnicalNotificationMail: , PreferredLanguage: ]
+AzureActiveDirectorySyncEngine Information: 904 : FileUploader: Setup and configuration logs will not be uploaded until the Health Agent is installed.
+AzureActiveDirectorySyncEngine Information: 904 : FileUploader: The Azure AD Health sync agent install path was not found in the registry.
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::SetIntegerValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\ADHealthAgent\Sync, UpdateCheckEnabled, 1)
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::SetIntegerValue
+AzureActiveDirectorySyncEngine Verbose: 901 : >>> RegistryAdapter::GetStringValue(HKEY_LOCAL_MACHINE, SOFTWARE\Microsoft\Azure AD Connect, AzureInstance, )
+AzureActiveDirectorySyncEngine Verbose: 902 : <<< RegistryAdapter::GetStringValue:0
